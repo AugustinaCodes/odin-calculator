@@ -7,26 +7,13 @@ const display = document.querySelector(".display");
 
 [...buttons].map((button) => {
   button.addEventListener("click", () => {
-    firstNumber = display.textContent = `${button.textContent}`;
-    console.log(firstNumber);
-    // currently with each button press, the value gets replaced rather than saved/appended
-
-    // so keep storing the value and appending the display until an operator is selected
+    display.append(`${button.textContent}`)
     
-    
-
-    // if (button.id === "equals") {
-    //     operate(operator, firstNumber, secondNumber)
-    // }
+    if (button.id === 'clear'){
+      display.textContent = ""
+    }
   });
 });
-
-//button click
-//save value
-//populate the display
-
-//don't replace the display (and value)
-//keep showing the other number and operator in the display
 
 
 function add(a, b) {
